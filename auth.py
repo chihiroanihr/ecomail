@@ -24,7 +24,7 @@ class auth:
         if not os.path.exists(credential_dir):
             os.makedirs(credential_dir)
         credential_path = os.path.join(credential_dir,
-                                       'python-gmail-api-tutorial.json') #######CHENGE NAME
+                                       'python-gmail-api.json') #######CHENGE NAME
 
         store = Storage(credential_path)
         credentials = store.get()
