@@ -41,4 +41,4 @@ def imageProcessor(image, filterRequested):
 
 #Tester
 path = os.getcwd() + "\\img\\"
-print(imageProcessor(path + 'Tester.png', True))
+getImage = imageProcessor(path + 'Tester.png', True))
