@@ -33,6 +33,6 @@ def contentVerify(image):
 
     return df['description']
 
-path = os.getcwd() + "\\img\\"
-
-print(contentVerify(path + "Tester.png"))
+if __name__ == '__main__':
+    path = os.getcwd() + "\\img\\"
+    print(contentVerify(path + "Tester.png"))
