@@ -4,7 +4,8 @@ import pandas as pd
 
 def contentVerify(image):
 
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r"ServiceAccountToken.json"
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "ServiceAccountToken.json"
+    
     client = vision.ImageAnnotatorClient()
 
     image_path = os.path.join('',image)
