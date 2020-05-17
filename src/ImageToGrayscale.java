@@ -1,16 +1,16 @@
+import py4j.GatewayServer;
+
 public class ImageToGrayscale {
     // Number of threads to use
     public static int threads = 1;
     public static Grayscale[] threadList;
     public volatile int x = 0;
-    public static Image img = new Image();
+    public static Image img;
+    public static GatewayServer gatewayServer;
 
-    public static void main(String[] args) {
+    public void runImageProcessing(String name){
         try {
-            if (args.length>0) {
-                threads = Integer.parseInt(args[0]);
-            }
-
+            img = new Image(name);
             //create a thread list
             threadList = new Grayscale[threads];
 
@@ -41,5 +41,11 @@ public class ImageToGrayscale {
             System.out.println("ERROR " +e);
             e.printStackTrace();
         }
+        //gatewayServer.shutdown();
+    }
+
+    public static void main(String[] args) {
+        gatewayServer = new GatewayServer(new ImageToGrayscale());
+        gatewayServer.start();
     }
 }

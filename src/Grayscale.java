@@ -45,37 +45,4 @@ public class Grayscale implements Runnable {
             System.out.println("Failed");
         }
     }
-
-    /*
-    private int calculateConvolution(int x, int y){
-
-        int c1, c2, c3, c4, c5, c6, c7, c8, c9;
-
-        c1 = img.getRGBValue(x-1,y-1);  //Left Top
-        c2 = img.getRGBValue(x,y-1);       //Top
-        c3 = img.getRGBValue(x+1,y-1);  //Right Top
-        c4 = img.getRGBValue(x-1,y);       //Left
-        c5 = img.getRGBValue(x,y);            //Center
-        c6 = img.getRGBValue(x+1,y);       //Right
-        c7 = img.getRGBValue(x-1,y+1);  //Left Bottom
-        c8 = img.getRGBValue(x,y+1);       //Bottom
-        c9 = img.getRGBValue(x+1,y+1);  //Right Bottom
-
-
-        int red = (kernel[0] * ((c1 >> 16) & 0xff)) + (kernel[1] * ((c2 >> 16) & 0xff)) + (kernel[2] * ((c3 >> 16) & 0xff)) +
-                (kernel[3] * ((c4 >> 16) & 0xff)) + (kernel[4] * ((c5 >> 16) & 0xff)) + (kernel[5] * ((c6 >> 16) & 0xff)) +
-                (kernel[6] * ((c7 >> 16) & 0xff)) + (kernel[7] * ((c8 >> 16) & 0xff)) + (kernel[8] * ((c9 >> 16) & 0xff)) ;
-
-        int green = (kernel[0] * ((c1 >> 8) & 0xff)) + (kernel[1] * ((c2 >> 8) & 0xff)) + (kernel[2] * ((c3 >> 8) & 0xff)) +
-                (kernel[3] * ((c4 >> 8) & 0xff)) + (kernel[4] * ((c5 >> 8) & 0xff)) + (kernel[5] * ((c6 >> 8) & 0xff)) +
-                (kernel[6] * ((c7 >> 8) & 0xff)) + (kernel[7] * ((c8 >> 8) & 0xff)) + (kernel[8] * ((c9 >> 8) & 0xff)) ;
-
-        int blue = (kernel[0] * (c1 & 0xff)) + (kernel[1] * (c2 & 0xff)) + (kernel[2] * (c3 & 0xff)) +
-                (kernel[3] * (c4 & 0xff)) + (kernel[4] * (c5 & 0xff)) + (kernel[5] * (c6 & 0xff)) +
-                (kernel[6] * (c7 & 0xff)) + (kernel[7] * (c8 & 0xff)) + (kernel[8] * (c9 & 0xff));
-
-        int rgb = (red << 16 | green << 8 | blue);
-        return rgb;
-    }
-    */
 }

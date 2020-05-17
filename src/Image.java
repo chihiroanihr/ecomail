@@ -3,18 +3,16 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-//For Q1
-
 public class Image{
 
     public int width,height;
     private volatile int x,y;
     private BufferedImage img,outputimage;
 
-    Image(){
+    Image(String name){
         try{
             // read in an image from a file
-            img = ImageIO.read(new File("AdvertisementDEMO.jpg"));
+            img = ImageIO.read(new File(name));
 
             // store the dimensions locally for convenience
             width = img.getWidth();
@@ -31,6 +29,7 @@ public class Image{
             e.printStackTrace();
         }
     }
+
 
     //Atomically access the x and y coordinate
     public synchronized int[] getRGBWithCoordinate(){
@@ -68,7 +67,7 @@ public class Image{
 
     public void publishOutput(){
         try {
-            File outputfile = new File("outputimage.png");
+            File outputfile = new File("Filtered.png");
             ImageIO.write(outputimage, "png", outputfile);
         }catch(IOException e){
             System.out.println("ERROR " + e);
