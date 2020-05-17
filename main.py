@@ -76,7 +76,6 @@ sendInst = send_email.send_email(service)
 # (sender, recipient, title, body, attachment)
 
 # Decide what to send
-text = "Hi there"
 sender = "chihiroanihr@gmail.com"
 to = "rhina4649@gmail.com"
 title = "Testing Email"
