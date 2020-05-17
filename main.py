@@ -67,8 +67,8 @@ for c in content:
 
 '''
 
+### HERE IS THE PROBLEM IT DOESNT WORK DUE TO IMAGE PROCESSOR.py NOT WORKING 
 
-'''
 import send_email
 from ImageProcessor import imageProcessor
 # Now, create message
@@ -89,4 +89,3 @@ message = sendInst.create_message_with_attachment(sender,to,title,body,imageToSe
 #sendInst send instance, send message
 sendInst.send_message('me',message)
     # "me": user_id from def send_message(self, user_id, message) in send_email.py
-'''
