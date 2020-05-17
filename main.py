@@ -7,6 +7,8 @@ from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
 
+imageForTest = "proteinsale.png"
+
 try:
     import argparse
     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
@@ -37,9 +39,8 @@ http = credentials.authorize(httplib2.Http())
 #run service(features)
 service = discovery.build('gmail', 'v1', http=http)
 
-# get_labels() 
-
-image_path = os.getcwd() + "\\img\\Tester.png"
+# get_labels()
+image_path = os.getcwd() + "\\img\\" + imageForTest
 # Verify if the picture is ad or not
 from OCR import contentVerify
     #print(contentVerify(image_path))

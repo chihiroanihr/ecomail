@@ -34,5 +34,6 @@ def contentVerify(image):
     return df['description']
 
 if __name__ == '__main__':
-    path = os.getcwd() + "\\img\\"
-    print(contentVerify(path + "Tester.png"))
+    imageForTest = "proteinsale.png"
+    image_path = os.getcwd() + "\\img\\" + imageForTest
+    print(contentVerify(image_path))
