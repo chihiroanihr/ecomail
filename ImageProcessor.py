@@ -29,6 +29,7 @@ def imageProcessor(image, filterRequested):
     
     score += contentVerify(image)
     
+    #print(score)
     #If the score reaches the threshold, then consider it as an advertisement
     if score >= 10:
         advertisement = True
@@ -45,4 +46,4 @@ def imageProcessor(image, filterRequested):
     return decidedImage
 
 #Tester
-print(imageProcessor('DEMO1.png', True))
+#print(imageProcessor('DEMO1.png', True))
