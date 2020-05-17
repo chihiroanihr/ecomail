@@ -54,7 +54,6 @@ content = content.lower().split()
 for c in content:
     if c in ad_list:
         filterRequest = True
-        print(c)
 
 '''
 ad_list = ["$", "discount", "sale", "mega sale", "buy", "buy now", "check out", "subscribe", "price", "drop", "limited",
@@ -80,11 +79,21 @@ sender = "chihiroanihr@gmail.com"
 to = "rhina4649@gmail.com"
 title = "Testing Email"
 body = "Hi THERE"
+bcc = ""
 
 # Filter image
 imageToSend = imageProcessor(image_path, filterRequest)
 
-message = sendInst.create_message_with_attachment(sender,to,title,body,imageToSend)
+message = sendInst.create_message_with_attachment(sender,to,bcc,title,body,imageToSend)
 #sendInst send instance, send message
 sendInst.send_message('me',message)
     # "me": user_id from def send_message(self, user_id, message) in send_email.py
+
+import json
+import get_email
+getInst = get_email.get_email(service)
+messages = getInst.GetMessageList(DateFrom='2020-01-01',DateTo='2020-02-01')
+#output result
+for message in messages:
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(message, f, ensure_ascii=False, indent=4)

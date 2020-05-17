@@ -6,3 +6,8 @@ Image.class
 ImageToGrayscale.class
 app.js
 venv/
+.project/
+data.json
+out/
+.idea/
+.git/

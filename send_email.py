@@ -1,5 +1,7 @@
 from __future__ import print_function
 import httplib2
+from datetime import datetime
+from email.utils import formatdate
 import os
 
 from apiclient import discovery
@@ -26,20 +28,24 @@ class send_email:
         #service: the variable that allows you to run all the commands you sent to the GMAIL api
         self.service = service
 
-    def create_message(self,sender, to, subject, message_text):
+    def create_message(self,sender, to, bcc, subject, message_text):
       message = MIMEText(message_text)  # message_text: body of the message
       message['to'] = to  # recipient
       message['from'] = sender  # sender
       message['subject'] = subject  # subject
+      message['Bcc'] = bcc
+      message['Date'] = formatdate(localtime=True)
       return {'raw': base64.urlsafe_b64encode(message.as_bytes())} # change from string to bytes
 
-    def create_message_with_attachment(self, sender, to, subject, message_text, file):
+    def create_message_with_attachment(self, sender, to, bcc, subject, message_text, file):
       message = MIMEMultipart() # using attachment requires Multipart()
       # one part email: have body
       # two part email: have body and an attachment
       message['to'] = to
       message['from'] = sender
       message['subject'] = subject
+      message['Bcc'] = bcc
+      message['Date'] = formatdate(localtime=True)
 
       msg = MIMEText(message_text)
       message.attach(msg)
