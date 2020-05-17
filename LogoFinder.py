@@ -12,6 +12,11 @@ def Detect_Logo(image):
     
     visionImage = vision.types.Image(content=content)
     response = client.logo_detection(image=visionImage)
-    return response
-
-print(Detect_Logo('Grocery.jpg'))
+    logos = response.logo_annotations
+    
+    for logo in logos:
+        print(logo.description)
+        
+    return len(logos) > 0
+    
+#print(Detect_Logo("DEMO.png"))
