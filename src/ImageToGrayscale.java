@@ -2,7 +2,7 @@ import py4j.GatewayServer;
 
 public class ImageToGrayscale {
     // Number of threads to use
-    public static int threads = 1;
+    public static int threads = 4;
     public static Grayscale[] threadList;
     public volatile int x = 0;
     public static Image img;
