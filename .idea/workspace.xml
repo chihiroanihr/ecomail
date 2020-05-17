@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d48851ad-7b7b-4907-bd3f-0466bd3b3633" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecomail.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/py4j0_10_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/py4j0_10_91.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogoFinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogoFinder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OCR.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OCR_v5.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +31,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/py4j0.10.9.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -81,25 +73,33 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="140" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1589749295694" />
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1589751711857">
+    <state x="388" y="178" key="FileChooserDialogImpl" timestamp="1589752752952">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1589751711857" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1589751711857">
+    <state x="388" y="178" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1589752752952" />
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1589752765699">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1589751711857" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1589751711856">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1589752765699" />
+    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1589752765699">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1589751711856" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1589751711857">
+    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1589752765699" />
+    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1589752765699">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1589751711857" />
-    <state x="165" y="10" key="SettingsEditor" timestamp="1589749353025">
+    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1589752765699" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1589752765699">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="165" y="10" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1589749353025" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1589752765699" />
+    <state x="165" y="10" key="SettingsEditor" timestamp="1589752756821">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="165" y="10" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1589752756821" />
+    <state x="343" y="200" key="run.anything.popup" timestamp="1589752740210">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="343" y="200" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1589752740210" />
   </component>
 </project>
