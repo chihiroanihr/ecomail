@@ -1,4 +1,4 @@
-import os, io
+import os, io, re
 from google.cloud import vision
 import pandas as pd
 
@@ -31,8 +31,18 @@ def contentVerify(image):
             ignore_index=True
         )
 
-    return df['description']
+    # likelihood of image being an advertisement
+    score = 0
+    
+    signlist = ["$", "%"]
+    for sign in signlist:
+        score += 1.25 * len(re.findall(sign, str(df['description'][0])))
+    
+    keylist = ['PRICE', 'OFFER', 'SALE', 'DISCOUNT', 'FREE', 'PROMO', 'SHOP', 'CODE','TRY', 'BONUS', 'SAVE', 'EXTRA', 'EVENT', 'CLEARANCE', 'POINT', 'LIMITED', 'OFF', 'BEST PRICE' 'SPECIAL', 'HOT SALE', 'BIG SALE', 'HALF PRICE', 'VALUE']
+    
+    for keyword in keylist:
+        score += 1.5 * len(re.findall(keyword, str(df['description'][0]).upper()))
 
-if __name__ == '__main__':
-    path = os.getcwd() + "\\img\\"
-    print(contentVerify(path + "Tester.png"))
+    return score
+    
+#print(contentVerify("DEMO.png"))

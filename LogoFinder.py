@@ -14,9 +14,9 @@ def Detect_Logo(image):
     response = client.logo_detection(image=visionImage)
     logos = response.logo_annotations
     
-    for logo in logos:
-        print(logo.description)
+    #for logo in logos:
+    #    print(logo.description)
         
     return len(logos) > 0
     
-#print(Detect_Logo("DEMO.png"))
+#print(Detect_Logo("DEMO9.png"))
