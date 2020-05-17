@@ -15,7 +15,6 @@ try:
 except ImportError:
     flags = None
 
-
 import auth
 def get_labels():
     results = service.users().labels().list(userId='me').execute()
@@ -29,7 +28,7 @@ def get_labels():
             print(label['name'])
 
 SCOPES = 'https://mail.google.com/'
-CLIENT_SECRET_FILE = 'credentials_secret.json'
+CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'Gmail API Python Quickstart'
 authInst = auth.auth(SCOPES,CLIENT_SECRET_FILE,APPLICATION_NAME)
 credentials = authInst.get_credentials()
@@ -39,35 +38,6 @@ http = credentials.authorize(httplib2.Http())
 #run service(features)
 service = discovery.build('gmail', 'v1', http=http)
 
-# get_labels()
-image_path = os.getcwd() + "\\img\\" + imageForTest
-# Verify if the picture is ad or not
-from OCR import contentVerify
-    #print(contentVerify(image_path))
-
-filterRequest = False
-content = contentVerify(image_path)
-ad_list = ["$", "discount", "sale", "megasale", "buy", "buynow", "checkout", "subscribe", "price", "drop", "limited",
-"offer", "%/off", "best", "special", "hot", "big", "halfprice"]
-content = content[0]
-#content = content.replace("\n", " ").lower()
-content = content.lower().split()
-for c in content:
-    if c in ad_list:
-        filterRequest = True
-
-'''
-ad_list = ["$", "discount", "sale", "mega sale", "buy", "buy now", "check out", "subscribe", "price", "drop", "limited",
-"offer", "% off", "best", "special", "hot", "big", "half price", "wireless"]
-for c in content:
-    c = c.replace("\n", " ").lower()
-    if c in ad_list:
-        filterRequest = True
-        print(c)
-
-'''
-
-### HERE IS THE PROBLEM IT DOESNT WORK DUE TO IMAGE PROCESSOR.py NOT WORKING 
 
 import send_email
 from ImageProcessor import imageProcessor
@@ -83,12 +53,14 @@ body = "Hi THERE"
 bcc = ""
 
 # Filter image
-imageToSend = imageProcessor(image_path, filterRequest)
+imageForTest = "proteinsale.png"
+image_path = os.getcwd() + "\\img\\" + imageForTest
+imageToSend = imageProcessor(image_path, True)
 
 message = sendInst.create_message_with_attachment(sender,to,bcc,title,body,imageToSend)
 #sendInst send instance, send message
 sendInst.send_message('me',message)
-    # "me": user_id from def send_message(self, user_id, message) in send_email.py
+# "me": user_id from def send_message(self, user_id, message) in send_email.py
 
 import json
 import get_email

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d48851ad-7b7b-4907-bd3f-0466bd3b3633" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/ecomail.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
@@ -17,11 +18,15 @@
       <change beforePath="$PROJECT_DIR$/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
+=======
+    <list default="true" id="82627b2f-5f51-4556-8eaa-7a024618b7c5" name="Default Changelist" comment="" />
+>>>>>>> 6b4b9eff47736fbadcabbcf8f49ef9e491329433
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
@@ -32,14 +37,24 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1c3FDkFuooV5uh4VkA4czIExbOv" />
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1c0VSiOGa3GS7UliJzuKveKPeuD" />
+>>>>>>> 6b4b9eff47736fbadcabbcf8f49ef9e491329433
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -53,6 +68,18 @@
     <configuration name="ImageToGrayscale" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ImageToGrayscale" />
       <module name="ecomail" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HTE tester" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15527344" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ImageToGrayscale" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ImageToGrayscale" />
+      <module name="ImageConverter" />
+>>>>>>> 6b4b9eff47736fbadcabbcf8f49ef9e491329433
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -77,6 +104,7 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="140" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589749295694">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -101,5 +129,59 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="165" y="10" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1589749353025" />
+=======
+    <state x="361" y="71" key="#Project_Structure" timestamp="1589691991422">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1589691991422" />
+    <state x="772" y="128" key="DetectedRootsChooserDialog" timestamp="1589692246275">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="772" y="128" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1589692246275" />
+    <state x="722" y="154" key="FileChooserDialogImpl" timestamp="1589732620655">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="722" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589732620655" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1589752128796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589752128796" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1589752128796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589752128796" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1589752128796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589752128796" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1589752128796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589752128796" />
+    <state width="724" height="258" key="GridCell.Tab.1.bottom" timestamp="1589674398652">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="724" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589674398652" />
+    <state width="724" height="258" key="GridCell.Tab.1.center" timestamp="1589674398652">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="724" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589674398652" />
+    <state width="724" height="258" key="GridCell.Tab.1.left" timestamp="1589674398652">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="724" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589674398652" />
+    <state width="724" height="258" key="GridCell.Tab.1.right" timestamp="1589674398652">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="724" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589674398652" />
+    <state x="498" y="0" key="SettingsEditor" timestamp="1589692295818">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589692295818" />
+    <state x="209" y="33" key="new project wizard" timestamp="1589700352411">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1589700352411" />
+>>>>>>> 6b4b9eff47736fbadcabbcf8f49ef9e491329433
   </component>
 </project>

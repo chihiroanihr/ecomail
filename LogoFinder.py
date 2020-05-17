@@ -14,9 +14,14 @@ def Detect_Logo(image):
     response = client.logo_detection(image=visionImage)
     logos = response.logo_annotations
     
-    for logo in logos:
-        print(logo.description)
+    #for logo in logos:
+    #    print(logo.description)
         
     return len(logos) > 0
-    
-#print(Detect_Logo("DEMO.png"))
+
+#Tester
+if __name__ == '__main__':
+    #print(imageProcessor('DEMO1.png', True))
+    imageForTest = "proteinsale.png"
+    image_path = os.getcwd() + "\\img\\" + imageForTest
+    print(image_path)

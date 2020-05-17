@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/ecomail.iml" filepath="$PROJECT_DIR$/ecomail.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/ImageConverter.iml" filepath="$PROJECT_DIR$/ImageConverter.iml" />
+>>>>>>> 6b4b9eff47736fbadcabbcf8f49ef9e491329433
     </modules>
   </component>
 </project>
