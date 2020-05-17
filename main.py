@@ -27,7 +27,7 @@ def get_labels():
             print(label['name'])
 
 SCOPES = 'https://mail.google.com/'
-CLIENT_SECRET_FILE = 'client_secret.json'
+CLIENT_SECRET_FILE = 'credentials_secret.json'
 APPLICATION_NAME = 'Gmail API Python Quickstart'
 authInst = auth.auth(SCOPES,CLIENT_SECRET_FILE,APPLICATION_NAME)
 credentials = authInst.get_credentials()
