@@ -1,5 +1,6 @@
 import os.path
 from py4j.java_gateway import JavaGateway
+from LogoFinder import Detect_Logo
 
 #This function processes the image and return the appropriate image
 
@@ -12,8 +13,20 @@ def imageProcessor(image, filterRequested):
     if not os.path.isfile(image):
         raise IOError
 
-#(Step 2) Using OCR, verify whether the image is for the advertisement purpose or not.
+#Don't filter out jpg. They are already compressed enough!
+    ext = os.path.splitext(image)[-1].lower()
+    if ext == ".jpg":
+       filterRequested = False;
 
+#(Step 2) Using OCR, verify whether the image is for the advertisement purpose or not.
+    score = 0
+    
+    #If there is a brand name, it is possible that it's going to be the advertisement
+    if Detect_Logo(image):
+        score += 1
+        print(score)
+    
+    print(score)
 
 #(Step 3) Using Java, Convert image from original to Grayscale without modifying the original image
     if filterRequested:
@@ -27,4 +40,4 @@ def imageProcessor(image, filterRequested):
     return decidedImage
 
 #Tester
-print(imageProcessor('DEMO.jpg', True))
+print(imageProcessor('DEMO.png', True))
