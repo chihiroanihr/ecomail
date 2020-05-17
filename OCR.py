@@ -31,6 +31,18 @@ def contentVerify(image):
             ignore_index=True
         )
 
-    return df['description']
+    # likelihood of image being an advertisement
+    score = 0
+    
+    signlist = ['\$', '\%']
+    for sign in signlist:
+        score += 1.25 * df['description'].str.count(sign).sum()
+    
+    keylist = ['Price', 'Offer', 'Sale', 'Discount', 'Free', 'Promo', 'Shop', 'Code', 'Try', 'Bonus', 'Save', 'Extra', 'Event', 'Clearance']
+    
+    for keyword in keylist:
+        score += 1.5 * df['description'].str.count(keyword).sum()
 
-print(contentVerify("Tester.png"))
+    return score
+    
+#print(contentVerify("Tester.png"))
