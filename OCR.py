@@ -41,7 +41,7 @@ def contentVerify(image):
     keylist = ['Price', 'Offer', 'Sale', 'Discount', 'Free', 'Promo', 'Shop', 'Code', 'Try', 'Bonus', 'Save', 'Extra', 'Event', 'Clearance']
     
     for keyword in keylist:
-        score += 1.5 * df['description'].str.count(keyword).sum()
+        score += 1.5 * df['description'].str.count(keyword, case=False).sum()
 
     return score
     
