@@ -45,28 +45,32 @@ from ImageProcessor import imageProcessor
 sendInst = send_email.send_email(service)
 # (sender, recipient, title, body, attachment)
 
-from calculateEmission import size
+from calculateEmission import size, difference
 # Filter image
-imageForTest = "proteinsale.png"
+imageForTest = "DEMO.png"
 image_path = os.getcwd() + "\\img\\" + imageForTest
 text = size(imageForTest)
 # Decide what to send
 sender = "chihiroanihr@gmail.com"
-to = "rhina4649@gmail.com"
+to = "shoh04190915@gmail.com"
 title = "Testing Email"
-body = text
-imageToSend = imageProcessor(image_path, True)
+body = "This original size contain" + text
+imageToSend = imageProcessor("DEMO.png", True)
+
+if imageToSend == 'Filtered.png':
+    body += "\n Congrats!!! Using this program reduces the emission by " + str(difference(imageForTest, imageToSend)) + "g"
 
 message = sendInst.create_message_with_attachment(sender,to,title,body,imageToSend)
 #sendInst send instance, send message
 sendInst.send_message('me',message)
 # "me": user_id from def send_message(self, user_id, message) in send_email.py
 
-import json
-import get_email
-getInst = get_email.get_email(service)
-messages = getInst.GetMessageList(DateFrom='2020-01-01',DateTo='2020-02-01')
+
+#import json
+#import get_email
+#getInst = get_email.get_email(service)
+#messages = getInst.GetMessageList(DateFrom='2020-01-01',DateTo='2020-02-01')
 #output result
-for message in messages:
-    with open('data.json', 'w', encoding='utf-8') as f:
-        json.dump(message, f, ensure_ascii=False, indent=4)
+#for message in messages:
+#    with open('data.json', 'w', encoding='utf-8') as f:
+#        json.dump(message, f, ensure_ascii=False, indent=4)
