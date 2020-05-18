@@ -45,19 +45,19 @@ from ImageProcessor import imageProcessor
 sendInst = send_email.send_email(service)
 # (sender, recipient, title, body, attachment)
 
+from calculateEmission import size
+# Filter image
+imageForTest = "proteinsale.png"
+image_path = os.getcwd() + "\\img\\" + imageForTest
+text = size(imageForTest)
 # Decide what to send
 sender = "chihiroanihr@gmail.com"
 to = "rhina4649@gmail.com"
 title = "Testing Email"
-body = "Hi THERE"
-bcc = ""
-
-# Filter image
-imageForTest = "proteinsale.png"
-image_path = os.getcwd() + "\\img\\" + imageForTest
+body = text
 imageToSend = imageProcessor(image_path, True)
 
-message = sendInst.create_message_with_attachment(sender,to,bcc,title,body,imageToSend)
+message = sendInst.create_message_with_attachment(sender,to,title,body,imageToSend)
 #sendInst send instance, send message
 sendInst.send_message('me',message)
 # "me": user_id from def send_message(self, user_id, message) in send_email.py
